@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       :root {
+  --white-color:#f7f7f7;
+  --pink-color: #ffa9ff;
+  --black-color: #212222;
+  --blue-color: #aaf2ff;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  background: var(--pink-color);
+
+}
+/*navbar styling*/
+.navbar_logo{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--white-color);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 35px;
+  margin-left: 24px;
+  font-weight: bold;
+}
+.navbar {
+  background: var(--pink-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px calc((100vw - 1200px) / 2);
+  z-index: 10;
+  position: relative;
+}
+.navbar_bars {
+  opacity: 0;
+}
+#navbar_menu--links {
+color: var(--white-color);
+display: flexbox;
+text-decoration: none;
+font-size: 32px;
+font-weight: bold;
+}
+/*end of navbar styling*/
+/*aside styling*/
+aside {
+  float: left;
+  width: 50%;
+  color: var(--white-color);
+  padding: 50px;
+  color: var(--white-color);
+  display: flexbox;
+}
+aside ul li {
+  padding-bottom: 10px;
+}
+aside ul li p {
+  font-size: 23px;
+}
+/*article styling*/
+.content {
+  font-size: 25.6px;
+}
+article .content {
+  margin-left: 20px;
+}
+article #aboutMe, article #contact {
+  margin-bottom: 20px;
+  padding: 50px;
+  color: var(--white-color);
+}
+article p {
+  font-size: 25px;
+}
+article {
+  float: right;
+  width: 50%;
+  color: var(--white-color);
+  padding: 50px;
+  color: var(--white-color);
+  display: flexbox;
+}
+#contactMe, #projects {
+  list-style-type: none;
+}
+#projects .projectItem img {
+    width: 100%;
+    height: 100%;
+}
+#projects li {
+margin-bottom: 30px;
+}
+article h2, aside h2 {
+  margin-bottom: 20px;
+  font-size: 35px;
+}
+article ul, aside ul {
+  font-size: 28px;
+}
+/*end of article styling*/
+#logo .logo_container img {
+  height: 100%;
+  width: 100%;
+}
+
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    top: 0;
+    left: 0;
+    border-radius: 20px;
+}
+
+.projectItem:hover .overlay, #navbar_menu--links:hover {
+    color: var(--blue-color);
+}
+.overlay a {
+    font-size: 30px;
+    color: var(--white-colorcolor);
+    text-decoration: none;
+}
+
+/*media queries styling*/
+
+@media screen and (max-width: 1023px) {
+  .navbar_menu {
+    background-color: #fffff000;
+    box-shadow: 0 8px 16px rgb(10 10 10 / 10%);
+    padding: 8px 0;
+  }
+  
+  article {
+    clear: both;
+    width: 100%; 
+}
+aside {
+    clear: both;
+    width: 100%;
+}
+}
+@media screen and (max-width: 768px) {
+.btn {
+  width: 100%;
+}
+  .navbar_bars {
+    color: var(--black-color);
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 32px;
+  }
+  article {
+      padding: 4px;
+  }
+}
+
+/*ipad mini devices*/
+@media only screen 
+  and (min-device-width: 601px) 
+  and (max-device-width: 1024px) {
+
+article {
+    clear: both;
+    width: 100%;
+}
+aside {
+    clear: both;
+    width: 100%;
+}
+  }
+
+
+
+  /* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  color: var(--white-color);
+  padding: 12px;
+  border: 1px solid var(--blue-color);
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: aqua;
+  color: var(--white-color);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: var(--blue-color);
+}
+
+/* Style the container/contact section */
+.container {
+    color: var(--white-color);
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+   </style>
+    <title>Portfolio</title>
+</head>
+<body>
+      <header>
+      <!--navbar starts-->
+      <nav class="navbar">
+        <a href="./index.html" class="navbar_logo">Jennyfer Constanza Portfolio</a>
+        <!--navbar menu tabs-->
+        <div class="navbar__menu" id="navbar__menu">
+          <a href="./aboutme.html" class="navbar__menu--links" id="navbar_menu--links">About me</a>
+          <a href="./project.html" class="navbar__menu--links" id="navbar_menu--links">Projects</a>
+          <a href="./contact.html" class="navbar__menu--links" id="navbar_menu--links">Contact</a> 
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+      <!--end of navbar-->
+    </header>
+    <article>
+        <!--section for logo-->
+        <section id="logo">
+          <div class="logo_container">
+            <img src="./selfie.jpg" alt="selfie image">
+          </div>
+        </section>
+        <!--about me section-->
+        <section id="aboutMe">
+          <h2>About me</h2>
+          <p>
+            👋 Hi, my name is Jennyfer Constanza and I am currently enrolled in the UCLA Extension Full-Stack Web Development Bootcamp.
+            <br>
+            🌋 I graduated from the University of California, Berkeley with a bachelor's degree in Sociology in the Class of 2019.
+            <br>
+            👀 I’m interested in working as a software developer.
+            <br>
+            📫 How to reach me: <a href="mailto: jennyferislas@gmail.com">jennyferislas@gmail.com</a>
+          </p>
+        </section>
+        <!--contact me section-->
+       <section id="contact">
+          <h2>Services</h2>
+          <ul id="contactMe">
+              <li>To be added soon ....</li>
+          </ul>
+       </section>
+      </article>
+<!--end of article-->
+<!--aside starts-->
+      <aside>
+  <!--project section-->
+        <div id="projectSection">
+          <h2>Projects</h2>
+          <ul id="projects">
+            <li class="projectItem">
+                <img src="./recodefactor.jpeg" alt="recode image">
+                <div class="overlay">
+                    <a href="https://github.com/jennyferconstanza/week1-challenge" target ="_blank">Code Refactor</a>
+                </div>
+            </li>
+            
+            <li class="projectItem">
+                <img src="./weather.png" alt="weather dashboard">
+                <div class="overlay">
+                    <a href="https://github.com/jennyferconstanza/WeatherDashboard" target ="_blank">Weather Dashboard</a>
+                </div>
+            </li>
+          
+            <li class="projectItem">
+                <img src="./node.jpeg" alt="node.js">
+                <div class="overlay">
+                    <a href="https://github.com/jennyferconstanza/READMEGenerator" target ="_blank">Node JS</a>
+                </div>
+            </li>
+
+
+          </ul>
+        </div>
+    </aside>   
+ <!--end of aside-->
+ <div class="container">
+  <div style="text-align:center">
+    <h2>Contact Me</h2>
+    <p>Reach me through my  <a href="mailto: jennyferislas@gmail.com">email</a> or <a href="https://github.com/jennyferconstanza" target="_blank">GitHub</a>, or leave me a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="./meeting.jpeg" style="width:100%" alt="team mates">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit" id="submitButton">
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+<script src="script.js">
+
+let person = prompt("Please enter your name");
+ if (person != null) {
+   alert ("Hello " + person + "! How are you today?");
+ }
+
+
+function myFunction() {
+  let navbar = document.getElementById("navbar__menu");
+  if (navbar.style.display === "block") {
+    navbar.style.display = "none";
+  } else {
+    navbar.style.display = "block";
+  }
+}
+let submitButton = document.querySelector("#submitButton");
+
+submitButton.addEventListener("click", storeInquiry);
+var inputElement = document.querySelectorAll(
+  "#fname",
+  "#lname",
+  "#country",
+  "#subject"
+);
+
+function storeInquiry(event) {
+  //prevent default behavior of form submission
+  event.preventDefault();
+  //check for input, if user does not input or submit the form alert displays
+  if (!inputElement.value) {
+    alert("Please fill out form completely before pressing submit");
+    return;
+  }
+
+};
+</script>
+
+</html>
